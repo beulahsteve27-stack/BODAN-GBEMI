@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d30">
+  <meta name="description" content="Register to attend BODAN GBEMI & FRIENDS. Admission is strictly by registration.">
+  <title>BODAN GBEMI & FRIENDS | Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#173d30;--deep:#102b22;--gold:#d6b66f;--cream:#f6f3eb;--ink:#1d2923;--muted:#6d776f;--line:#e4e7e1}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+    .hero{min-height:410px;position:relative;display:grid;place-items:center;padding:54px 22px 75px;overflow:hidden;text-align:center;color:#fff;background:linear-gradient(115deg,rgba(10,35,27,.95),rgba(23,61,48,.84)),radial-gradient(circle at 15% 20%,rgba(214,182,111,.35),transparent 28%),radial-gradient(circle at 85% 75%,rgba(214,182,111,.22),transparent 30%),#173d30}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(214,182,111,.28);border-radius:50%;width:360px;height:360px;pointer-events:none}
+    .hero:before{left:-190px;top:-180px}.hero:after{right:-210px;bottom:-230px;width:470px;height:470px}
+    .hero-inner{position:relative;z-index:1;max-width:760px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold);font-size:11px;letter-spacing:3px;font-weight:700;text-transform:uppercase}
+    .eyebrow:before,.eyebrow:after{content:"";width:25px;height:1px;background:var(--gold)}
+    h1{margin:22px 0 12px;font:800 clamp(38px,7vw,68px)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.8px}
+    .hero-subtitle{color:#e8e6dc;font-size:clamp(15px,2vw,18px);line-height:1.7;margin:0 auto;max-width:570px}
+    .hero-note{display:inline-block;margin-top:25px;padding:9px 15px;border:1px solid rgba(214,182,111,.6);border-radius:30px;color:#f1d99f;font-size:11px;font-weight:700;letter-spacing:1.5px}
+    .main-wrap{width:min(100% - 32px,1050px);margin:-42px auto 0;position:relative;z-index:2;padding-bottom:55px}
+    .event-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px 14px 0 0;overflow:hidden;box-shadow:0 12px 35px rgba(19,45,34,.07)}
+    .event-item{background:#fff;text-align:center;padding:17px 10px}
+    .event-label{color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:1.4px;font-weight:700}
+    .event-value{margin-top:6px;color:var(--green);font-weight:700;font-size:14px}
+    .content-card{display:grid;grid-template-columns:.85fr 1.15fr;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;overflow:hidden;box-shadow:0 18px 50px rgba(19,45,34,.08)}
+    .intro-panel{background:#f0f2ec;padding:43px 36px}
+    .intro-panel h2{font:700 30px/1.2 "Playfair Display",Georgia,serif;color:var(--green);margin:0 0 15px}
+    .intro-panel p{color:#59665d;line-height:1.75;font-size:14px;margin:0 0 22px}
+    .notice{border-left:3px solid var(--gold);padding:12px 14px;background:#fff;color:#4f5a52;font-size:12px;line-height:1.6}
+    .form-panel{padding:42px 42px 38px}
+    .form-heading{margin-bottom:27px}
+    .form-heading .small{color:#a18445;text-transform:uppercase;font-size:10px;letter-spacing:2px;font-weight:700}
+    .form-heading h2{margin:8px 0 7px;font:700 27px "Playfair Display",Georgia,serif;color:var(--green)}
+    .form-heading p{color:var(--muted);font-size:13px;margin:0}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px 15px}
+    .field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}
+    label{color:#34443a;font-size:12px;font-weight:700}label span{color:#b77b3b}
+    input,select{width:100%;height:48px;border:1px solid #dfe4de;border-radius:7px;background:#fff;padding:0 13px;font:13px "DM Sans",sans-serif;color:var(--ink);outline:none;transition:border .2s,box-shadow .2s}
+    input:focus,select:focus{border-color:#789384;box-shadow:0 0 0 3px rgba(23,61,48,.08)}
+    input::placeholder{color:#a5ada6}
+    .terms{display:flex;align-items:flex-start;gap:10px;margin:21px 0 18px}
+    .terms input{width:16px;height:16px;margin:2px 0 0;accent-color:var(--green);flex:0 0 auto}
+    .terms label{font-weight:400;color:#667168;line-height:1.6;font-size:11px}
+    .submit-btn{border:0;border-radius:7px;width:100%;min-height:51px;background:var(--green);color:#fff;cursor:pointer;font:700 12px "DM Sans",sans-serif;letter-spacing:1.4px;transition:background .2s,transform .2s}
+    .submit-btn:hover{background:var(--deep);transform:translateY(-1px)}
+    .submit-btn:disabled{opacity:.65;cursor:wait;transform:none}
+    .secure-note{text-align:center;color:#929b93;font-size:10px;margin:13px 0 0}
+    .message{display:none;padding:12px 14px;margin:0 0 16px;border-radius:7px;font-size:12px;line-height:1.5}
+    .message.error{display:block;background:#fff0ed;color:#9d3e2e;border:1px solid #f3d0c8}
+    .success-panel{display:none;text-align:center;padding:20px 5px 8px}
+    .success-icon{display:grid;place-items:center;width:62px;height:62px;margin:0 auto 17px;border-radius:50%;background:#e8f2eb;color:var(--green);font-size:29px}
+    .success-panel h2{color:var(--green);font:700 29px "Playfair Display",Georgia,serif;margin:0 0 8px}
+    .success-panel p{color:var(--muted);font-size:13px;line-height:1.6}
+    .ticket{margin:22px auto;padding:18px;border:1px dashed #b9c6bb;border-radius:10px;max-width:340px;background:#fbfcfa}
+    .ticket-label{color:#8b968d;font-size:9px;font-weight:700;letter-spacing:1.7px}
+    .ticket-id{margin:7px 0 14px;color:var(--green);font-size:20px;font-weight:700;letter-spacing:1px;overflow-wrap:anywhere}
+    .ticket img{width:142px;height:142px;display:block;margin:0 auto 9px}
+    .ticket small{color:#7a857c;font-size:10px}
+    .print-btn{border:1px solid #cdd8ce;background:#fff;color:var(--green);padding:12px 18px;border-radius:6px;font-weight:700;cursor:pointer}
+    .footer{text-align:center;color:#8b948c;font-size:11px;padding:23px 10px 0}.footer strong{color:var(--green)}
+    .hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+    #submitFrame{display:none}
+    @media(max-width:760px){.hero{min-height:365px;padding-top:48px}.main-wrap{width:min(100% - 22px,560px);margin-top:-35px}.event-strip{grid-template-columns:1fr}.event-item{padding:12px}.event-value{font-size:13px}.content-card{grid-template-columns:1fr}.intro-panel{padding:27px 24px}.intro-panel h2{font-size:25px}.intro-panel p{margin-bottom:15px}.form-panel{padding:30px 22px}.form-heading h2{font-size:24px}}
+    @media(max-width:430px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{font-size:39px}}
+    @media print{body{background:#fff}.hero,.event-strip,.intro-panel,.form-heading,#registrationForm,.footer,.print-btn{display:none!important}.main-wrap{margin:0;width:100%}.content-card{display:block;border:0;box-shadow:none}.form-panel{padding:0}.success-panel{display:block!important}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">A gathering of good people</div>
+      <h1>BODAN GBEMI<br>&amp; FRIENDS</h1>
+      <p class="hero-subtitle">Good people. Great moments. Beautiful memories.<br>We look forward to having you with us.</p>
+      <div class="hero-note">REGISTRATION IS REQUIRED FOR ADMISSION</div>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <section class="event-strip" aria-label="Event information">
+      <div class="event-item"><div class="event-label">Date</div><div class="event-value" id="eventDate">Event date to be announced</div></div>
+      <div class="event-item"><div class="event-label">Time</div><div class="event-value" id="eventTime">Event time to be announced</div></div>
+      <div class="event-item"><div class="event-label">Venue</div><div class="event-value" id="eventVenue">Venue to be announced</div></div>
+    </section>
+
+    <section class="content-card">
+      <aside class="intro-panel">
+        <h2>Be part of the moment.</h2>
+        <p>This is a special gathering created to bring friends together, share good moments and make lasting memories. Complete the form to reserve your place.</p>
+        <div class="notice"><strong>Please note:</strong> Admission is strictly for guests who have completed registration. Each guest must submit their own registration form. Duplicate registrations using the same phone number or email address will not be accepted.</div>
+      </aside>
+
+      <div class="form-panel">
+        <div id="formArea">
+          <div class="form-heading">
+            <div class="small">Guest registration</div>
+            <h2>Reserve your place</h2>
+            <p>Enter your details below. Fields marked * are required.</p>
+          </div>
+          <div id="message" class="message" role="alert"></div>
+
+          <!-- Form posts to Apps Script in a hidden iframe. This works from GitHub Pages without browser CORS fetch restrictions. -->
+          <form id="registrationForm" method="post" target="submitFrame">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="fullName">Full name <span>*</span></label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" maxlength="100" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number <span>*</span></label>
+                <input id="phone" name="phone" type="tel" placeholder="e.g. 08012345678" maxlength="30" autocomplete="tel" required>
+              </div>
+              <div class="field">
+                <label for="email">Email address <span>*</span></label>
+                <input id="email" name="email" type="email" placeholder="e.g. name@email.com" maxlength="150" autocomplete="email" required>
+              </div>
+              <div class="field full">
+                <label for="referral">How did you hear about the event? <span style="color:#9aa39b;font-weight:400">(Optional)</span></label>
+                <select id="referral" name="referral">
+                  <option value="">Select an option</option>
+                  <option>Friend or family</option>
+                  <option>WhatsApp</option>
+                  <option>Instagram</option>
+                  <option>Facebook</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="terms">
+              <input id="agreed" name="agreed" type="checkbox" value="true" required>
+              <label for="agreed">I confirm that the information provided is correct and understand that admission is strictly for registered guests. I consent to the organizers using these details to manage event registration and attendance.</label>
+            </div>
+
+            <button class="submit-btn" id="submitBtn" type="submit">COMPLETE REGISTRATION</button>
+            <p class="secure-note">Your details are used for event registration and attendance management.</p>
+          </form>
+        </div>
+
+        <div class="success-panel" id="successPanel" aria-live="polite">
+          <div class="success-icon">✓</div>
+          <h2>You're registered!</h2>
+          <p id="successText">Thank you. Your registration has been received successfully.</p>
+          <div class="ticket">
+            <div class="ticket-label">YOUR REGISTRATION REFERENCE</div>
+            <div class="ticket-id" id="registrationId"></div>
+            <img id="qrCode" alt="QR code containing your registration reference">
+            <small>Keep this reference and show it to the event team at check-in.</small>
+          </div>
+          <button class="print-btn" type="button" onclick="window.print()">Print / Save confirmation</button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">A special gathering by <strong>BODAN GBEMI &amp; FRIENDS</strong></footer>
+  </main>
+
+  <iframe id="submitFrame" name="submitFrame" title="Registration submission"></iframe>
+
+  <script>
+    /*
+     * REQUIRED: Paste your deployed Google Apps Script Web App URL below.
+     * It must be the URL ending in /exec, not the Apps Script editor URL.
+     */
+    const GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+    // Update these event details before publishing.
+    const EVENT_DETAILS = {
+      date: 'Event date to be announced',
+      time: 'Event time to be announced',
+      venue: 'Venue to be announced'
+    };
+
+    document.getElementById('eventDate').textContent = EVENT_DETAILS.date;
+    document.getElementById('eventTime').textContent = EVENT_DETAILS.time;
+    document.getElementById('eventVenue').textContent = EVENT_DETAILS.venue;
+
+    const form = document.getElementById('registrationForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const message = document.getElementById('message');
+    let waitingForResponse = false;
+
+    form.action = GOOGLE_SCRIPT_URL;
+
+    form.addEventListener('submit', function (event) {
+      message.className = 'message';
+      message.textContent = '';
+
+      if (GOOGLE_SCRIPT_URL.indexOf('https://script.google.com/macros/s/') !== 0 ||
+          GOOGLE_SCRIPT_URL.indexOf('/exec') === -1) {
+        event.preventDefault();
+        showError('The registration page has not been connected to Google Sheets yet. Please contact the organizer.');
+        return;
+      }
+
+      if (!form.reportValidity()) {
+        event.preventDefault();
+        return;
+      }
+
+      waitingForResponse = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'SUBMITTING REGISTRATION...';
+    });
+
+    window.addEventListener('message', function (event) {
+      const data = event.data;
+      if (!data || data.type !== 'BGF_REGISTRATION_RESULT' || !waitingForResponse) return;
+
+      waitingForResponse = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'COMPLETE REGISTRATION';
+
+      if (!data.payload || !data.payload.success) {
+        showError(data.payload && data.payload.message
+          ? data.payload.message
+          : 'Registration could not be completed. Please try again.');
+        return;
+      }
+
+      showSuccess(data.payload);
+    });
+
+    function showError(text) {
+      message.textContent = text;
+      message.className = 'message error';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'COMPLETE REGISTRATION';
+      waitingForResponse = false;
+    }
+
+    function showSuccess(result) {
+      document.getElementById('formArea').style.display = 'none';
+      document.getElementById('registrationId').textContent = result.registrationId;
+      document.getElementById('successText').textContent =
+        'Thank you, ' + result.fullName + '. Your registration has been received and saved for the event organizers.';
+      const qrPayload = encodeURIComponent(result.registrationId);
+      document.getElementById('qrCode').src =
+        'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + qrPayload;
+      document.getElementById('successPanel').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
